@@ -10,7 +10,7 @@ MANAGE_FILE=${MANAGE_FILE:2}
 cat <<EOF
 ---
 config_vars:
-  PATH: "vendor/BIND/bin:vender/traceroute/bin:/usr/bin/:/bin"
+  PATH: "vendor/BIND/bin:vendor/traceroute/bin:/usr/bin/:/bin"
 EOF
 
 
