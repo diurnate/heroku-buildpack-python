@@ -189,13 +189,7 @@ set-default-env PYTHONPATH /app/
 export BIND_BINARY="https://s3.amazonaws.com/si-generic/bind-9.9.tgz"
 export BIND_VENDOR="vendor/BIND"
 mkdir -p $1/$BIND_VENDOR
-#curl $BIND_BINARY -o - | tar -xz -C $1/$BIND_VENDOR -f -
-
-# Add traceroute
-export TRACEROUTE_BINARY="https://s3.amazonaws.com/si-generic/traceroute-1.4a12.tgz"
-export TRACEROUTE_VENDOR="vendor/traceroute"
-mkdir -p $1/$TRACEROUTE_VENDOR
-#curl $TRACEROUTE_BINARY -o - | tar -xz -C $1/$TRACEROUTE_VENDOR -f -
+curl $BIND_BINARY -o - | tar -xz -C $1/$BIND_VENDOR -f -
 
 # Experimental post_compile hook.
 source $BIN_DIR/steps/hooks/post_compile
